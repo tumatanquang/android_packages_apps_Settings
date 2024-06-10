@@ -65,6 +65,7 @@
     <string name="fingerprint_enroll_touch_dialog_message_side" product="tablet">Dotknij czujnika znajdującego się z boku twojego tabletu.</string>
     <string name="fingerprint_enroll_touch_dialog_message_side" product="device">Dotknij czujnika znajdującego się z boku twojego urządzenia.</string>
     <string name="fingerprint_enroll_touch_dialog_message_side" product="default">Dotknij czujnika znajdującego się z boku twojego telefonu.</string>
+    <string name="security_settings_require_screen_on_to_auth_with_proximity_description">Dotknij czujnika, aby odblokować, nawet gdy ekran jest wyłączony. Czujnik zbliżeniowy zapobiega przypadkowemu odblokowaniu.</string>
     <string name="show_navbar_hint_title">Pasek nawigacji</string>
     <string name="show_navbar_hint_summary">Pokaż pasek nawigacji w dolnej części ekranu</string>
     <string name="app_notification_sound_timeout_title">Minimalny czas między dźwiękami powiadomień</string>
@@ -105,4 +106,20 @@
     <string name="storage_warning_internal">Ostrzeżenie: Ta opcja może nie działać poprawnie lub prowadzić do utraty danych i dlatego nie jest zalecana!</string>
     <string name="assisted_gps">Używaj wspomaganego systemu GPS</string>
     <string name="assisted_gps_summary">Pobierz dane pomocy satelitarnej z Internetu, które mogą znacznie poprawić wydajność uruchamiania GPS. W przypadku połączeń awaryjnych wspomagany GPS jest zawsze dozwolony.</string>
+    <string name="battery_technology">Technologia</string>
+    <string name="battery_health">Zdrowie</string>
+    <string name="battery_health_good">Dobra</string>
+    <string name="battery_health_overheat">Przegrzana</string>
+    <string name="battery_health_dead">Niesprawna</string>
+    <string name="battery_health_over_voltage">Zbyt wysokie napięcie</string>
+    <string name="battery_health_unspecified_failure">Nieokreślony błąd</string>
+    <string name="battery_health_cold">Zimna</string>
+    <string name="battery_health_unknown">Nieznana</string>
+    <string name="battery_temperature">Temperatura</string>
+    <string name="battery_voltage">Napięcie</string>
+    <string name="battery_charge_counter_summary">%1$d mAh</string>
+    <string name="battery_design_capacity">Fabryczna pojemność</string>
+    <string name="battery_design_capacity_summary">%1$d mAh</string>
+    <string name="battery_maximum_capacity">Maksymalna pojemność</string>
+    <string name="battery_maximum_capacity_summary">%1$d mAh (%2$d%%)</string>
 </resources>

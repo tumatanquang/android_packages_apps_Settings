@@ -15,6 +15,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="show_dev_countdown_cm">{count, plural,
+      one {}=1      {T\'ammancat # passu a s\'ativatzione de sa cunfiguratzione de isvilupu.}
+      other   {T\'ammancant # passos a s\'ativatzione de sa cunfiguratzione de isvilupu.}
+    }</string>
+    <string name="security_settings_require_screen_on_to_auth_with_proximity_description">Toca su sensore pro isblocare, fintzas cun s\'ischermu istudadu. Su sensore de prossimidade èvitat su blocu atzidentale.</string>
     <string name="app_notification_sound_timeout_value_10_seconds">10 segundos</string>
     <string name="app_notification_sound_timeout_value_30_seconds">30 segundos</string>
     <string name="app_notification_sound_timeout_value_1_minute">1 minutu</string>
@@ -23,4 +28,21 @@
     <string name="app_notification_sound_timeout_value_30_minutes">30 minutos</string>
     <string name="data_usage_app_restrict_wifi">Datos Wi\u2011Fi</string>
     <string name="data_usage_app_restrict_wifi_summary">Abìlita s\'impreu de sos datos Wi\u2011Fi</string>
+    <string name="assisted_gps">Imprea su GPS assistidu</string>
+    <string name="battery_technology">Tecnologia</string>
+    <string name="battery_health">Salude</string>
+    <string name="battery_health_good">Bona</string>
+    <string name="battery_health_overheat">subracallentada</string>
+    <string name="battery_health_dead">Morta</string>
+    <string name="battery_health_over_voltage">Tensione in etzessu</string>
+    <string name="battery_health_unspecified_failure">Errore no ispetzificadu</string>
+    <string name="battery_health_cold">Fria</string>
+    <string name="battery_health_unknown">Disconnotu</string>
+    <string name="battery_temperature">Temperadura</string>
+    <string name="battery_voltage">Voltàgiu</string>
+    <string name="battery_charge_counter_summary">%1$d mAh</string>
+    <string name="battery_design_capacity">Capatzidade progetada</string>
+    <string name="battery_design_capacity_summary">%1$d mAh</string>
+    <string name="battery_maximum_capacity">Capatzidade màssima</string>
+    <string name="battery_maximum_capacity_summary">%1$d mAh (%2$d%%)</string>
 </resources>

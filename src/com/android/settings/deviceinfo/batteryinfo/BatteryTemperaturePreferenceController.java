@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 The Android Open Source Project
+ * Copyright (C) 2024 Paranoid Android
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,35 +18,44 @@ package com.android.settings.deviceinfo.batteryinfo;
 
 import android.content.Context;
 import android.content.Intent;
+import android.icu.text.MeasureFormat;
+import android.icu.util.Measure;
+import android.icu.util.MeasureUnit;
 import android.os.BatteryManager;
 
 import com.android.settings.R;
 import com.android.settings.core.BasePreferenceController;
 import com.android.settingslib.fuelgauge.BatteryUtils;
 
-/**
- * A controller that manages the information about battery cycle count.
- */
-public class BatteryCycleCountPreferenceController extends BasePreferenceController {
+import java.util.Locale;
 
-    public BatteryCycleCountPreferenceController(Context context,
-            String preferenceKey) {
+/**
+ * A controller that manages the information about battery temperature.
+ */
+public class BatteryTemperaturePreferenceController extends BasePreferenceController {
+
+    public BatteryTemperaturePreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
     }
 
     @Override
     public int getAvailabilityStatus() {
-        return mContext.getResources().getBoolean(R.bool.config_show_battery_cycle_count)
-                ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        return AVAILABLE;
     }
 
     @Override
     public CharSequence getSummary() {
         final Intent batteryIntent = BatteryUtils.getBatteryIntent(mContext);
-        final int cycleCount = batteryIntent.getIntExtra(BatteryManager.EXTRA_CYCLE_COUNT, -1);
+        final int temperatureTenths =
+                batteryIntent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, -1);
 
-        return cycleCount <= 0
-                ? mContext.getText(R.string.battery_cycle_count_not_available)
-                : Integer.toString(cycleCount);
+        if (temperatureTenths > 0) {
+            float temperature = temperatureTenths / 10f;
+
+            return MeasureFormat.getInstance(Locale.getDefault(), MeasureFormat.FormatWidth.SHORT)
+                    .format(new Measure(temperature, MeasureUnit.CELSIUS));
+        }
+
+        return mContext.getText(R.string.battery_temperature_not_available);
     }
 }

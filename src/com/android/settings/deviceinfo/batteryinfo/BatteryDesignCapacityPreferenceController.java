@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 The Android Open Source Project
+ * Copyright (C) 2024 Paranoid Android
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,28 +25,30 @@ import com.android.settings.core.BasePreferenceController;
 import com.android.settingslib.fuelgauge.BatteryUtils;
 
 /**
- * A controller that manages the information about battery cycle count.
+ * A controller that manages the information about battery design capacity.
  */
-public class BatteryCycleCountPreferenceController extends BasePreferenceController {
+public class BatteryDesignCapacityPreferenceController extends BasePreferenceController {
 
-    public BatteryCycleCountPreferenceController(Context context,
-            String preferenceKey) {
+    public BatteryDesignCapacityPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
     }
 
     @Override
     public int getAvailabilityStatus() {
-        return mContext.getResources().getBoolean(R.bool.config_show_battery_cycle_count)
-                ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        return AVAILABLE;
     }
 
     @Override
     public CharSequence getSummary() {
-        final Intent batteryIntent = BatteryUtils.getBatteryIntent(mContext);
-        final int cycleCount = batteryIntent.getIntExtra(BatteryManager.EXTRA_CYCLE_COUNT, -1);
+        Intent batteryIntent = BatteryUtils.getBatteryIntent(mContext);
+        final int designCapacityUah =
+                batteryIntent.getIntExtra(BatteryManager.EXTRA_DESIGN_CAPACITY, -1);
 
-        return cycleCount <= 0
-                ? mContext.getText(R.string.battery_cycle_count_not_available)
-                : Integer.toString(cycleCount);
+        if (designCapacityUah > 0) {
+            int designCapacity = designCapacityUah / 1_000;
+            return mContext.getString(R.string.battery_design_capacity_summary, designCapacity);
+        }
+
+        return mContext.getString(R.string.battery_design_capacity_not_available);
     }
 }

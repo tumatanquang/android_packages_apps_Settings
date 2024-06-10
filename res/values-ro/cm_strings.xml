@@ -64,6 +64,7 @@
     <string name="fingerprint_enroll_touch_dialog_message_side" product="tablet">Atingeţi senzorul de pe partea laterală a tabletei.</string>
     <string name="fingerprint_enroll_touch_dialog_message_side" product="device">Atingeţi senzorul de pe partea laterală a dispozitivului.</string>
     <string name="fingerprint_enroll_touch_dialog_message_side" product="default">Atingeţi senzorul de pe partea laterală a telefonului.</string>
+    <string name="security_settings_require_screen_on_to_auth_with_proximity_description">Atingeți senzorul pentru deblocare, chiar și atunci când ecranul este oprit. Senzorul de proximitate previne deblocarea accidentală.</string>
     <string name="show_navbar_hint_title">Indicii navigare</string>
     <string name="show_navbar_hint_summary">Arată indiciul bării de navigare în partea de jos a ecranului</string>
     <string name="app_notification_sound_timeout_title">Timp minim între sunetele notificărilor</string>
@@ -104,4 +105,20 @@
     <string name="storage_warning_internal">Atenție: Este posibil ca această opțiune să nu funcționeze corespunzător sau să ducă la pierderea datelor și, prin urmare, nu este recomandată!</string>
     <string name="assisted_gps">Utilizați GPS asistat</string>
     <string name="assisted_gps_summary">Descarcă datele de asistență prin satelit de pe internet, care pot îmbunătăți considerabil performanța de pornire a GPS-ului. Pentru apelurile de urgență, GPS-ul asistat este întotdeauna permis.</string>
+    <string name="battery_technology">Tehnologie</string>
+    <string name="battery_health">Sănătate</string>
+    <string name="battery_health_good">Bună</string>
+    <string name="battery_health_overheat">Supraîncălzită</string>
+    <string name="battery_health_dead">Moartă</string>
+    <string name="battery_health_over_voltage">Supratensiune</string>
+    <string name="battery_health_unspecified_failure">Defecțiune nespecificată</string>
+    <string name="battery_health_cold">Rece</string>
+    <string name="battery_health_unknown">Necunoscută</string>
+    <string name="battery_temperature">Temperatură</string>
+    <string name="battery_voltage">Tensiune</string>
+    <string name="battery_charge_counter_summary">%1$d mAh</string>
+    <string name="battery_design_capacity">Capacitate proiectată</string>
+    <string name="battery_design_capacity_summary">%1$d mAh</string>
+    <string name="battery_maximum_capacity">Capacitate maximă</string>
+    <string name="battery_maximum_capacity_summary">%1$d mAh (%2$d%%)</string>
 </resources>
